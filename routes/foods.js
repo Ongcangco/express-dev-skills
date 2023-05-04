@@ -4,7 +4,10 @@ var foodsCtrl = require('../controllers/foods');
 
 // All actual paths start with '/foods'
 
-// GET /todos
+// GET /foods
 router.get('/', foodsCtrl.index);
+
+// GET /foods/:id
+router.get('/:id', foodsCtrl.show);
 
 module.exports = router;

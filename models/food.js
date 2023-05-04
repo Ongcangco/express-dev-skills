@@ -5,8 +5,15 @@ const foods = [
   ];
 	
   module.exports = {
-    getAll
+    getAll,
+    getOne
   };
+
+  
+  function getOne(id) {
+    id = parseInt(id);
+    return foods.find(food => food.id === id);
+  }
 	
   function getAll() {
     return foods;

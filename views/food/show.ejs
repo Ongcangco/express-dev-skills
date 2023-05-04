@@ -9,15 +9,10 @@
 </head>
 <body>
     <a href="/">Home</a>
-    <h1>Food List</h1>
-    <ul>
-        <% foods.forEach(function(t) { %>
-            <li>
-              <a href="/foods/<%= t.id %>"><%= t.food %></a>
-            - 
-          <%= t.done ? 'done' : 'not done' %>
-        </li>
-      <% }); %>
-    </ul>
+    |
+    <a href="/foods">Food List</a>
+
+    <h3><%= food.food %></h3>
+    <h3>Complete: <%= food.done ? 'Yes' : 'No' %></h3>
   </body>
 </html>
