@@ -1,0 +1,23 @@
+<%- include('../partials/header')%>
+<h3>Foods as of <%= time %></h3>
+
+<ul>
+  <% foods.forEach(function(t) { %>
+    <li>
+      <form 
+      action="/foods/<%= t.id %>?_method=DELETE" 
+      method="POST"
+      class="delete-form"
+      >
+        <button type="submit">X</button>
+
+      </form>
+      <a href="/foods/<%= t.id %>"><%= t.food %></a>
+      - 
+      <%= t.done ? 'done' : 'not done' %>
+    </li>
+    <% }); %>
+  </ul>
+  <a href="/foods/new">Add Food</a>
+  
+  <%- include('../partials/footer') %>

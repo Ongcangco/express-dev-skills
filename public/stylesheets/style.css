@@ -4,5 +4,22 @@ body {
 }
 
 a {
-  color: #00B7FF;
+  color: #41849f;
 }
+
+
+.delete-form {
+  display: inline-block;
+  margin-right: 10px;
+}
+	
+.delete-form button {
+  color: red;
+  background-color: white;
+  
+}
+	
+li {
+  list-style: none;
+}
+
